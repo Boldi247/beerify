@@ -1,0 +1,33 @@
+.searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--brown);
+    border-radius: 5rem;
+    font-size: 1rem;
+
+    letter-spacing: 0.1em;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.icon {
+    position: absolute;
+    right: 1rem;
+    color: var(--brown);
+    cursor: pointer;
+    font-size: 2rem;
+}

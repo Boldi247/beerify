@@ -1,0 +1,57 @@
+.showcase {
+    background: rgb(182,163,157);
+    background: linear-gradient(135deg, rgba(182,163,157,1) 0%, rgba(153,129,122,1) 35%, rgb(181, 167, 163) 66%, rgba(239,239,239,1) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--main-bg);
+    padding: 2rem 4rem;
+    border-radius: 3rem .7rem 3rem .7rem;
+}
+
+.item_showcase img {
+    height: 15rem;
+}
+
+.beer_data h1{
+    max-width: 30rem;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+.wrapper p{
+    margin-top: 2rem;
+    font-style: italic;
+    text-align: center;
+    max-width: 50rem;
+}
+
+.beer_data_additional {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--main-bg);
+    border-top: 1px solid black;
+}
+
+.food ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 760px) {
+    .item_showcase {
+        flex-direction: column;
+        padding: 2rem;
+    }
+}

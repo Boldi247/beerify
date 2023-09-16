@@ -1,0 +1,149 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo h1, .icon {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_w {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--main-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.active {
+    background-color: transparent;
+    /*add backdrop filter and blur what is behind*/
+    backdrop-filter: blur(10px);
+    /*add box shadow*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(182, 163, 157, .2);
+    border-radius: 5px 5px 0 0;
+    z-index: -1;
+}
+
+.mobileMenuButton {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 748px){
+    .logo {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        width: 100%;
+        align-items: center;
+        justify-content:flex-end;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .navbar ul {
+        padding-top: 2rem;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5rem;
+    }
+
+    .navbar_w {
+        transform: translateY(-100%);
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: black;
+        padding: .4rem;
+        border-radius: .2rem;
+        color: var(--main-bg);
+        z-index: 101;
+    }
+
+    .mobileActive {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .hamburger {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
